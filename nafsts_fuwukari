@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAFSTS - Federal University Wukari</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #2e7d32;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .logo-container img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        nav {
+            background-color: #4caf50;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #e8f5e9;
+        }
+
+        .hero {
+            background-color: #e8f5e9;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .hero h2 {
+            color: #2e7d32;
+        }
+
+        .section {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .resource-card {
+            background-color: #f5f5f5;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .resource-card a {
+            color: #2e7d32;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .resource-card a:hover {
+            text-decoration: underline;
+        }
+
+        #practice-tests {
+            background-color: #f5f5f5;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .quiz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .quiz-card {
+            background-color: white;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .quiz-card h3 {
+            color: #2e7d32;
+        }
+
+        .quiz-card p {
+            font-size: 0.9em;
+            margin: 10px 0;
+        }
+
+        .quiz-card button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .quiz-card button:hover {
+            background-color: #388e3c;
+        }
+
+        .quiz-content {
+            margin-top: 20px;
+            background-color: #e8f5e9;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .quiz-content.active {
+            display: block;
+        }
+
+        .quiz-question {
+            margin-bottom: 1.5rem;
+        }
+
+        .quiz-question label {
+            margin-left: 0.5rem;
+        }
+
+        .submit-btn {
+            background-color: #4caf50;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover {
+            background-color: #388e3c;
+        }
+
+        .contact {
+            background-color: #2e7d32;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .logo-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            .quiz-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>National Association of Food Science & Technology Students</h1>
+        <p>Federal University Wukari Chapter</p>
+        <div class="logo-container">
+            <img src="images/fuw-logo.png" alt="Federal University Wukari Logo">
+            <img src="images/nafsts-logo.png" alt="NAFSTS Logo">
+        </div>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#resources">Resources</a>
+        <a href="#practice-tests">Practice Tests</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <h2>Welcome to NAFSTS Wukari</h2>
+        <p>Explore resources, practice for exams, and stay updated with the latest information from the National Association of Food Science and Technology Students, Federal University Wukari Chapter.</p>
+    </section>
+
+    <section class="section" id="resources">
+        <h2>Resources</h2>
+        <p>Access handouts on key Food Science and Technology topics to support your studies.</p>
+        <div class="resources-grid">
+            <div class="resource-card">
+                <h3>Food Chemistry</h3>
+                <p>Notes on food composition and reactions.</p>
+                <a href="resources/handouts/food-chemistry.pdf" download>Download Handout</a>
+            </div>
+            <div class="resource-card">
+                <h3>Microbiology</h3>
+                <p>Study guides on food safety and microbes.</p>
+                <a href="resources/handouts/microbiology.pdf" download>Download Handout</a>
+            </div>
+            <div class="resource-card">
+                <h3>Food Analysis</h3>
+                <p>Techniques for analyzing food quality.</p>
+                <a href="resources/handouts/food-analysis.pdf" download>Download Handout</a>
+            </div>
+            <div class="resource-card">
+                <h3>Food Engineering</h3>
+                <p>Principles of food processing tech.</p>
+                <a href="resources/handouts/food-engineering.pdf" download>Download Handout</a>
+            </div>
+            <div class="resource-card">
+                <h3>Engineering Maths</h3>
+                <p>Maths for food science applications.</p>
+                <a href="resources/handouts/engineering-maths.pdf" download>Download Handout</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="practice-tests">
+        <h2>Practice Tests</h2>
+        <p>Test your knowledge with quizzes on Food Science and Technology topics.</p>
+        <div class="quiz-grid">
+            <div class="quiz-card">
+                <h3>Food Chemistry</h3>
+                <p>Test your knowledge of food composition.</p>
+                <button onclick="showQuiz('chemistry')">Start Quiz</button>
+                <div id="quiz-chemistry" class="quiz-content">
+                    <div class="quiz-question">
+                        <p>1. What gas is primarily responsible for fruit ripening?</p>
+                        <input type="radio" name="chem1" value="a"> <label>Ethylene</label><br>
+                        <input type="radio" name="chem1" value="b"> <label>Carbon Dioxide</label><br>
+                        <input type="radio" name="chem1" value="c"> <label>Oxygen</label>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-card">
+                <h3>Microbiology</h3>
+                <p>Explore food safety and microbes.</p>
+                <button onclick="showQuiz('microbiology')">Start Quiz</button>
+                <div id="quiz-microbiology" class="quiz-content">
+                    <div class="quiz-question">
+                        <p>1. Which microbe is commonly associated with food spoilage?</p>
+                        <input type="radio" name="micro1" value="a"> <label>Salmonella</label><br>
+                        <input type="radio" name="micro1" value="b"> <label>Yeast</label><br>
+                        <input type="radio" name="micro1" value="c"> <label>E. coli</label>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-card">
+                <h3>Food Analysis</h3>
+                <p>Practice analytical techniques.</p>
+                <button onclick="showQuiz('analysis')">Start Quiz</button>
+                <div id="quiz-analysis" class="quiz-content">
+                    <div class="quiz-question">
+                        <p>1. What technique measures protein content in food?</p>
+                        <input type="radio" name="analysis1" value="a"> <label>Kjeldahl method</label><br>
+                        <input type="radio" name="analysis1" value="b"> <label>Spectroscopy</label><br>
+                        <input type="radio" name="analysis1" value="c"> <label>Titration</label>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-card">
+                <h3>Food Engineering</h3>
+                <p>Learn processing technologies.</p>
+                <button onclick="showQuiz('engineering')">Start Quiz</button>
+                <div id="quiz-engineering" class="quiz-content">
+                    <div class="quiz-question">
+                        <p>1. What process removes water from food to extend shelf life?</p>
+                        <input type="radio" name="eng1" value="a"> <label>Dehydration</label><br>
+                        <input type="radio" name="eng1" value="b"> <label>Fermentation</label><br>
+                        <input type="radio" name="eng1" value="c"> <label>Pasteurization</label>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-card">
+                <h3>Engineering Maths</h3>
+                <p>Apply maths to food science.</p>
+                <button onclick="showQuiz('maths')">Start Quiz</button>
+                <div id="quiz-maths" class="quiz-content">
+                    <div class="quiz-question">
+                        <p>1. What equation models heat transfer in food processing?</p>
+                        <input type="radio" name="math1" value="a"> <label>Fourier’s Law</label><br>
+                        <input type="radio" name="math1" value="b"> <label>Newton’s Law</label><br>
+                        <input type="radio" name="math1" value="c"> <label>Bernoulli’s Equation</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="submit-btn" onclick="checkQuizzes()">Submit All Answers</button>
+        <p id="quiz-result"></p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions? Reach out to the association.</p>
+        <p>Email: nafsts.wukari@university.edu</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Office: Room 305, Science Building, Federal University Wukari</p>
+    </section>
+
+    <footer>
+        <p>© 2025 National Association of Food Science & Technology Students, Federal University Wukari Chapter.</p>
+        <p>Proudly sponsored by NAFSTS ‘25 EXCOS.</p>
+    </footer>
+
+    <script>
+        function showQuiz(topic) {
+            // Hide all quiz contents
+            document.querySelectorAll('.quiz-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            // Show the selected quiz
+            document.getElementById(`quiz-${topic}`).classList.add('active');
+        }
+
+        function checkQuizzes() {
+            const answers = {
+                chem1: "a",
+                micro1: "b",
+                analysis1: "a",
+                eng1: "a",
+                math1: "a"
+            };
+            let score = 0;
+            const total = 5;
+            const chem1 = document.querySelector('input[name="chem1"]:checked');
+            const micro1 = document.querySelector('input[name="micro1"]:checked');
+            const analysis1 = document.querySelector('input[name="analysis1"]:checked');
+            const eng1 = document.querySelector('input[name="eng1"]:checked');
+            const math1 = document.querySelector('input[name="math1"]:checked');
+
+            if (chem1 && chem1.value === answers.chem1) score++;
+            if (micro1 && micro1.value === answers.micro1) score++;
+            if (analysis1 && analysis1.value === answers.analysis1) score++;
+            if (eng1 && eng1.value === answers.eng1) score++;
+            if (math1 && math1.value === answers.math1) score++;
+
+            const result = document.getElementById("quiz-result");
+            result.textContent = `You scored ${score} out of ${total}!`;
+        }
+    </script>
+</body>
+</html>
